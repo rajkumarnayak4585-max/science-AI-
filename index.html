@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Science AI World | Raj Kumar Nayak</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #071525;
+  color: #eef8ff;
+  line-height: 1.7;
+}
+
+header {
+  background: linear-gradient(120deg, #063b63, #087e8b);
+  padding: 28px 15px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 34px;
+  color: #7df9ff;
+}
+
+nav {
+  background: #04101f;
+  padding: 14px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #7df9ff;
+}
+
+.hero {
+  padding: 55px 20px;
+  text-align: center;
+  background: radial-gradient(circle, #124a70, #071525 75%);
+}
+
+.hero .atom {
+  font-size: 85px;
+}
+
+.hero h2 {
+  font-size: 34px;
+  color: #7df9ff;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 12px auto;
+}
+
+.btn {
+  display: inline-block;
+  background: #7df9ff;
+  color: #071525;
+  padding: 12px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+section {
+  max-width: 1100px;
+  padding: 40px 20px;
+  margin: auto;
+}
+
+section h2 {
+  color: #7df9ff;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: #102940;
+  border: 1px solid #205575;
+  padding: 22px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #7df9ff;
+}
+
+.emoji {
+  font-size: 45px;
+}
+
+.card h3 {
+  color: #7df9ff;
+  margin: 8px 0;
+}
+
+.info {
+  background: #102940;
+  border: 1px solid #205575;
+  border-radius: 15px;
+  padding: 24px;
+}
+
+.info ul {
+  padding-left: 22px;
+}
+
+.experiment {
+  margin-bottom: 16px;
+  background: #102940;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.experiment h3 {
+  color: #7df9ff;
+}
+
+.chat {
+  background: #102940;
+  border: 1px solid #7df9ff;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: auto;
+}
+
+#messages {
+  background: #071525;
+  height: 230px;
+  overflow-y: auto;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.message {
+  padding: 9px 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+}
+
+.bot {
+  background: #173e59;
+}
+
+.user {
+  background: #086477;
+  text-align: right;
+}
+
+.chat-controls {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #7df9ff;
+  border-radius: 8px;
+  background: #071525;
+  color: white;
+  font-size: 16px;
+}
+
+button {
+  padding: 11px 17px;
+  border: none;
+  border-radius: 8px;
+  background: #7df9ff;
+  color: #071525;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #04101f;
+  margin-top: 20px;
+}
+
+@media(max-width: 600px) {
+  header h1 { font-size: 27px; }
+  nav a {
+    display: inline-block;
+    margin: 5px 7px;
+  }
+  .hero h2 { font-size: 26px; }
+  .chat-controls { flex-wrap: wrap; }
+  .chat-controls input { flex-basis: 100%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🔬 Science AI World</h1>
+  <p>विज्ञान सीखें, नई खोज करें, भविष्य बनाएं!</p>
+  <p>Created by Raj Kumar Nayak | Class 9th</p>
+</header>
+
+<nav>
+  <a href="#home">होम</a>
+  <a href="#science">विज्ञान</a>
+  <a href="#space">अंतरिक्ष</a>
+  <a href="#experiments">प्रयोग</a>
+  <a href="#assistant">AI असिस्टेंट</a>
+</nav>
+
+<div class="hero" id="home">
+  <div class="atom">⚛️</div>
+  <h2>Welcome to Science AI World</h2>
+  <p>
+    विज्ञान और Artificial Intelligence की रोमांचक दुनिया में आपका स्वागत है।
+    यहां नई चीजें सीखें, वैज्ञानिक तथ्यों को जानें और सवाल पूछें।
+  </p>
+  <a href="#science" class="btn">विज्ञान की दुनिया देखें</a>
+</div>
+
+<section id="science">
+  <h2>🧪 विज्ञान की प्रमुख शाखाएं</h2>
+
+  <div class="cards">
+    <div class="card">
+      <div class="emoji">⚛️</div>
+      <h3>भौतिक विज्ञान</h3>
+      <p>बल, गति, प्रकाश, ऊर्जा और बिजली का अध्ययन।</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🧬</div>
+      <h3>जीव विज्ञान</h3>
+      <p>जीवों, कोशिकाओं, पौधों और मानव शरीर का अध्ययन।</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🧫</div>
+      <h3>रसायन विज्ञान</h3>
+      <p>पदार्थों, उनके गुणों और रासायनिक परिवर्तनों का अध्ययन।</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🤖</div>
+      <h3>Artificial Intelligence</h3>
+      <p>ऐसी तकनीक जो मशीनों को बुद्धिमान कार्य करने में मदद करती है।</p>
+    </div>
+  </div>
+</section>
+
+<section id="space">
+  <h2>🌌 अंतरिक्ष और सौर मंडल</h2>
+
+  <div class="cards">
+    <div class="card">
+      <div class="emoji">☀️</div>
+      <h3>सूर्य</h3>
+      <p>सूर्य हमारे सौर मंडल का तारा है और पृथ्वी को प्रकाश व ऊष्मा देता है।</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🌍</div>
+      <h3>पृथ्वी</h3>
+      <p>हमारा घर और सौर मंडल का तीसरा ग्रह।</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🔴</div>
+      <h3>मंगल</h3>
+      <p>लाल ग्रह के नाम से प्रसिद्ध, जहां रोबोटिक मिशन अध्ययन करते हैं।</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🚀</div>
+      <h3>अंतरिक्ष अनुसंधान</h3>
+      <p>वैज्ञानिक अंतरिक्ष यानों और दूरबीनों से ब्रह्मांड का अध्ययन करते हैं।</p>
+    </div>
+  </div>
+</section>
+
+<section id="experiments">
+  <h2>🔍 आसान विज्ञान प्रयोग</h2>
+
+  <div class="experiment">
+    <h3>1. पानी और तेल</h3>
+    <p>एक पारदर्शी गिलास में पानी और थोड़ा तेल डालें। तेल पानी के ऊपर तैरता दिखाई देगा, क्योंकि तेल का घनत्व पानी से कम होता है।</p>
+  </div>
+
+  <div class="experiment">
+    <h3>2. चुंबक का प्रयोग</h3>
+    <p>चुंबक को लोहे की छोटी वस्तुओं के पास लाएं। चुंबक कुछ लोहे की वस्तुओं को आकर्षित करेगा। छोटे बच्चों की निगरानी में प्रयोग करें।</p>
+  </div>
+
+  <div class="experiment">
+    <h3>3. सौर ऊर्जा</h3>
+    <p>पता करें कि सोलर पैनल सूर्य के प्रकाश को बिजली में कैसे बदलता है। प्रयोग के लिए कम वोल्टेज वाला शैक्षिक सोलर किट इस्तेमाल करें।</p>
+  </div>
+</section>
+
+<section>
+  <h2>💡 रोचक वैज्ञानिक तथ्य</h2>
+  <div class="info">
+    <ul>
+      <li>प्रकाश की गति निर्वात में लगभग 3 लाख किलोमीटर प्रति सेकंड है।</li>
+      <li>पौधे प्रकाश संश्लेषण की प्रक्रिया से अपना भोजन बनाते हैं।</li>
+      <li>पृथ्वी सूर्य की एक परिक्रमा लगभग 365.25 दिनों में पूरी करती है।</li>
+      <li>AI के कई सिस्टम उदाहरणों और डेटा से पैटर्न सीखते हैं।</li>
+      <li>चंद्रमा पृथ्वी का प्राकृतिक उपग्रह है।</li>
+    </ul>
+  </div>
+</section>
+
+<section id="assistant">
+  <h2>🤖 Mini Science AI Assistant</h2>
+  <div class="chat">
+    <p>विज्ञान के बारे में सवाल पूछें।</p>
+
+    <div id="messages" aria-live="polite">
+      <div class="message bot">
+        🤖 नमस्ते! मैं Science Bot हूं। आप मुझसे पृथ्वी,
+        सूर्य, AI, पौधों या विज्ञान के बारे में पूछ सकते हैं।
+      </div>
+    </div>
+
+    <div class="chat-controls">
+      <input id="question" placeholder="अपना सवाल लिखें..."
+        aria-label="विज्ञान का सवाल">
+      <button onclick="askScience()">पूछें ➤</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>👨‍🎓 Student Profile</h2>
+  <div class="info" style="text-align:center">
+    <div style="font-size:55px">🎓</div>
+    <h3>Raj Kumar Nayak</h3>
+    <p>Class: 9th</p>
+    <p>Project: Science AI World</p>
+    <p>Dream: विज्ञान और तकनीक के माध्यम से नई चीजें बनाना।</p>
+  </div>
+</section>
+
+<footer>
+  <h3>🔬 Science AI World</h3>
+  <p>Created by Raj Kumar Nayak | Class 9th</p>
+  <p>Keep Learning, Keep Discovering!</p>
+  <p>© 2026 Student Project</p>
+</footer>
+
+<script>
+function askScience() {
+  const input = document.getElementById("question");
+  const messages = document.getElementById("messages");
+  const q = input.value.trim().toLowerCase();
+
+  if (!q) return;
+
+  const userMessage = document.createElement("div");
+  userMessage.className = "message user";
+  userMessage.textContent = input.value;
+  messages.appendChild(userMessage);
+
+  let answer =
+    "मैं एक Demo Science Bot हूं। आप सूर्य, पृथ्वी, AI, पौधों या प्रकाश के बारे में पूछ सकते हैं।";
+
+  if (q.includes("सूर्य") || q.includes("sun")) {
+    answer = "सूर्य हमारे सौर मंडल का तारा है। यह पृथ्वी को प्रकाश और ऊष्मा देता है।";
+  } else if (q.includes("पृथ्वी") || q.includes("earth")) {
+    answer = "पृथ्वी सूर्य से तीसरा ग्रह है। यहां जीवन के लिए उपयुक्त परिस्थितियां मौजूद हैं।";
+  } else if (q.includes("ai") || q.includes("कृत्रिम बुद्धिमत्ता")) {
+    answer = "AI का अर्थ Artificial Intelligence है। यह कंप्यूटर को भाषा समझने और पैटर्न पहचानने जैसे कामों में मदद करती है।";
+  } else if (q.includes("पौधे") || q.includes("plant")) {
+    answer = "पौधे प्रकाश संश्लेषण से सूर्य के प्रकाश, पानी और कार्बन डाइऑक्साइड का उपयोग करके भोजन बनाते हैं।";
+  } else if (q.includes("प्रकाश") || q.includes("light")) {
+    answer = "प्रकाश ऊर्जा का एक रूप है। निर्वात में इसकी गति लगभग 300,000 किलोमीटर प्रति सेकंड होती है।";
+  } else if (q.includes("मंगल") || q.includes("mars")) {
+    answer = "मंगल को लाल ग्रह कहते हैं। वैज्ञानिक रोबोटिक रोवर की मदद से इसकी सतह का अध्ययन करते हैं।";
+  } else if (q.includes("पानी") || q.includes("water")) {
+    answer = "शुद्ध पानी सामान्य वायुमंडलीय दबाव पर लगभग 0°C पर जमता है और 100°C पर उबलता है।";
+  } else if (q.includes("नमस्ते") || q.includes("hello")) {
+    answer = "नमस्ते! विज्ञान के बारे में सवाल पूछिए। मैं आपकी मदद करने की कोशिश करूंगा।";
+  } else if (q.includes("राज कुमार") || q.includes("raj kumar")) {
+    answer = "इस वेबसाइट के निर्माता राज कुमार नायक हैं। वे कक्षा 9वीं के विद्यार्थी हैं।";
+  }
+
+  const botMessage = document.createElement("div");
+  botMessage.className = "message bot";
+  botMessage.textContent = "🤖 " + answer;
+  messages.appendChild(botMessage);
+
+  messages.scrollTop = messages.scrollHeight;
+  input.value = "";
+  input.focus();
+}
+
+document.getElementById("question").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") askScience();
+});
+</script>
+
+</body>
+</html>
